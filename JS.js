@@ -1,5 +1,7 @@
-window.localStorage.mode_state = JSON.stringify({backgroundColor:"#edf5fd",backgroundImage:"none",color:"black",secondarycolor:"white",img_url:"assets/images/icon-moon.svg",head_img:"assets/images/logo.svg"})
 
+if(window.localStorage.mode_state === undefined){
+      window.localStorage.mode_state = JSON.stringify({backgroundColor:"#edf5fd",backgroundImage:"none",color:"black",secondarycolor:"white",img_url:"assets/images/icon-moon.svg",head_img:"assets/images/logo.svg"})
+}
 
 
 //Elements addition
