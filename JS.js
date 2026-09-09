@@ -1,4 +1,4 @@
-
+window.localStorage.mode_state = JSON.stringify({backgroundColor:"#edf5fd",backgroundImage:"none",color:"black",secondarycolor:"white",img_url:"assets/images/icon-moon.svg",head_img:"assets/images/logo.svg"})
 
 
 
