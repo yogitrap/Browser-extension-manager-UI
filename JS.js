@@ -1,65 +1,4 @@
-let childbox = document.getElementsByTagName("footer")
-let mode = document.getElementById("mode_switch")
-let butto = document.getElementsByTagName("button")
-let header = document.querySelector("header")
-let weather = document.querySelector("header button img")
-console.log(childbox)
 
-
-
-document.querySelector("header img").src = JSON.parse(window.localStorage.mode_state)['head_img']
-weather.src = JSON.parse(window.localStorage.mode_state)['img_url']
-Object.assign(document.body.style,JSON.parse(window.localStorage.mode_state))
-for (let ele of butto){
-    ele.style.color = JSON.parse(window.localStorage.mode_state)['color']
-    ele.style.backgroundColor =  JSON.parse(window.localStorage.mode_state)['secondarycolor']
-}
-for (let ele of childbox){
-    ele.style.backgroundColor =  JSON.parse(window.localStorage.mode_state)['secondarycolor']
-}
-header.style.backgroundColor = JSON.parse(window.localStorage.mode_state)['secondarycolor']
-console.log(childbox)
-console.log(butto)
-mode.addEventListener("click",function(){
-    if (mode.checked === true){
-    window.localStorage.mode_state = JSON.stringify({backgroundColor:"#edf5fd",backgroundImage:"none",color:"black",secondarycolor:"white",img_url:"assets/images/icon-moon.svg",head_img:"assets/images/logo.svg"})
-    weather.src = JSON.parse(window.localStorage.mode_state)['img_url']
-    document.querySelector("header img").src = JSON.parse(window.localStorage.mode_state)['head_img']
-    Object.assign(document.body.style,JSON.parse(window.localStorage.mode_state))
-    for (let ele of butto){
-    if(ele.style.backgroundColor === "rgb(241, 93, 84)"){
-    ele.style.color = JSON.parse(window.localStorage.mode_state)['color']
-    }
-    else{
-    ele.style.color = JSON.parse(window.localStorage.mode_state)['color']
-    ele.style.backgroundColor =  JSON.parse(window.localStorage.mode_state)['secondarycolor']
-    }
-    }
-    for (let ele of childbox){
-    ele.style.backgroundColor =  JSON.parse(window.localStorage.mode_state)['secondarycolor']
-    }
-    header.style.backgroundColor = JSON.parse(window.localStorage.mode_state)['secondarycolor']
-    }
-    else{
-    window.localStorage.mode_state = JSON.stringify({backgroundColor:"rgb(5 10 30)",backgroundImage:"linear-gradient(to bottom, #050a1e 50%, #0a1640 100%)",color:"white",secondarycolor:"#2e344a",img_url:"assets/images/icon-sun.svg",head_img:"assets/images/logo - Copy.svg"})
-    document.querySelector("header img").src = JSON.parse(window.localStorage.mode_state)['head_img']
-    weather.src = JSON.parse(window.localStorage.mode_state)['img_url']
-    Object.assign(document.body.style,JSON.parse(window.localStorage.mode_state))
-    for (let ele of butto){
-    if(ele.style.backgroundColor === "rgb(241, 93, 84)"){
-    ele.style.color = JSON.parse(window.localStorage.mode_state)['color']
-    }
-    else{
-    ele.style.color = JSON.parse(window.localStorage.mode_state)['color']
-    ele.style.backgroundColor =  JSON.parse(window.localStorage.mode_state)['secondarycolor']
-    }
-      }  
-    for (let ele of childbox){
-    ele.style.backgroundColor =  JSON.parse(window.localStorage.mode_state)['secondarycolor']
-      }
-    header.style.backgroundColor = JSON.parse(window.localStorage.mode_state)['secondarycolor']
-    }
-})
 
 
 
@@ -173,7 +112,68 @@ myRequest.onreadystatechange = function(){
 
 
 // mode switch
+let childbox = document.getElementsByTagName("footer")
+let mode = document.getElementById("mode_switch")
+let butto = document.getElementsByTagName("button")
+let header = document.querySelector("header")
+let weather = document.querySelector("header button img")
+console.log(childbox)
 
+
+
+document.querySelector("header img").src = JSON.parse(window.localStorage.mode_state)['head_img']
+weather.src = JSON.parse(window.localStorage.mode_state)['img_url']
+Object.assign(document.body.style,JSON.parse(window.localStorage.mode_state))
+for (let ele of butto){
+    ele.style.color = JSON.parse(window.localStorage.mode_state)['color']
+    ele.style.backgroundColor =  JSON.parse(window.localStorage.mode_state)['secondarycolor']
+}
+for (let ele of childbox){
+    ele.style.backgroundColor =  JSON.parse(window.localStorage.mode_state)['secondarycolor']
+}
+header.style.backgroundColor = JSON.parse(window.localStorage.mode_state)['secondarycolor']
+console.log(childbox)
+console.log(butto)
+mode.addEventListener("click",function(){
+    if (mode.checked === true){
+    window.localStorage.mode_state = JSON.stringify({backgroundColor:"#edf5fd",backgroundImage:"none",color:"black",secondarycolor:"white",img_url:"assets/images/icon-moon.svg",head_img:"assets/images/logo.svg"})
+    weather.src = JSON.parse(window.localStorage.mode_state)['img_url']
+    document.querySelector("header img").src = JSON.parse(window.localStorage.mode_state)['head_img']
+    Object.assign(document.body.style,JSON.parse(window.localStorage.mode_state))
+    for (let ele of butto){
+    if(ele.style.backgroundColor === "rgb(241, 93, 84)"){
+    ele.style.color = JSON.parse(window.localStorage.mode_state)['color']
+    }
+    else{
+    ele.style.color = JSON.parse(window.localStorage.mode_state)['color']
+    ele.style.backgroundColor =  JSON.parse(window.localStorage.mode_state)['secondarycolor']
+    }
+    }
+    for (let ele of childbox){
+    ele.style.backgroundColor =  JSON.parse(window.localStorage.mode_state)['secondarycolor']
+    }
+    header.style.backgroundColor = JSON.parse(window.localStorage.mode_state)['secondarycolor']
+    }
+    else{
+    window.localStorage.mode_state = JSON.stringify({backgroundColor:"rgb(5 10 30)",backgroundImage:"linear-gradient(to bottom, #050a1e 50%, #0a1640 100%)",color:"white",secondarycolor:"#2e344a",img_url:"assets/images/icon-sun.svg",head_img:"assets/images/logo - Copy.svg"})
+    document.querySelector("header img").src = JSON.parse(window.localStorage.mode_state)['head_img']
+    weather.src = JSON.parse(window.localStorage.mode_state)['img_url']
+    Object.assign(document.body.style,JSON.parse(window.localStorage.mode_state))
+    for (let ele of butto){
+    if(ele.style.backgroundColor === "rgb(241, 93, 84)"){
+    ele.style.color = JSON.parse(window.localStorage.mode_state)['color']
+    }
+    else{
+    ele.style.color = JSON.parse(window.localStorage.mode_state)['color']
+    ele.style.backgroundColor =  JSON.parse(window.localStorage.mode_state)['secondarycolor']
+    }
+      }  
+    for (let ele of childbox){
+    ele.style.backgroundColor =  JSON.parse(window.localStorage.mode_state)['secondarycolor']
+      }
+    header.style.backgroundColor = JSON.parse(window.localStorage.mode_state)['secondarycolor']
+    }
+})
 
 //remove button
 let remove = document.getElementsByClassName("remove")
