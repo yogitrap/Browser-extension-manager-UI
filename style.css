@@ -1,0 +1,134 @@
+
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+*{
+    transition: 0.3s;
+    font-family: sans-serif;
+}
+p{
+    margin: 0;
+}
+.container{
+    width: max-content;
+    margin: auto;
+    max-width: 80%;
+}
+.container header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f2533;
+    padding: 9.5px;
+    border-radius: 15px;
+}
+.container header button{
+    background-color: #ededed;
+    border: 0;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #30364c;
+    position: relative;
+}
+.container header button label{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+.container header input{
+    display: none;
+}
+
+.container .parent .head button{
+    border: 0;
+    cursor: pointer;
+    padding: 5px 7.5px;
+    border-radius: 16px;
+}
+.parent .head{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    margin-top: 40px;
+    font-size: 26px;
+    font-weight: bold;
+}
+.mini_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.mini_container > *{
+    padding: 15px;
+    border-radius: 15px;
+    width: min-content;
+    min-width: 180px;
+}
+.mini_container > * .top_side{
+    display: flex;
+    gap: 11px;
+}
+
+.mini_container > * .top_side h5{
+    margin:7px 0 7px 0 ;
+}
+.mini_container .bottom_side{
+    display: flex;
+    justify-content: space-between;
+}
+.mini_container .bottom_side button{
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid #808080;
+    padding: 4px 7px;
+}
+.mini_container .bottom_side input{
+    margin: 0;
+    height: 100%;
+    display: none;
+    width: 100%;
+    background-color: transparent;
+}
+
+
+.mini_container > * .bottom_side label div{
+    height: 13px;
+    width: 24px;
+    background-color: white;
+    border-radius: 16px;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    background-color: #525868;
+    cursor: pointer;
+}
+.mini_container > * .bottom_side label div::after{
+    content: "";
+    display: block;
+    position: relative;
+    height: 12px;
+    width: 12px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.25s;
+}
+
+.mini_container .bottom_side:has(input:checked) label div{
+    background-color: #f15d54;
+}
+.mini_container .bottom_side:has(input:checked) label div::after{
+    transform: translateX(100%);
+
+}
+
+@media (max-width:500px){
+    .head{
+        flex-direction: column;
+    }
+}
