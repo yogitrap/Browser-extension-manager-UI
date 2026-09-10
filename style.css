@@ -66,6 +66,9 @@ p{
     gap: 10px;
 }
 .mini_container > *{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 15px;
     border-radius: 15px;
     width: min-content;
@@ -75,7 +78,9 @@ p{
     display: flex;
     gap: 11px;
 }
-
+.mini_container > * .top_side img{
+    height: max-content;
+}
 .mini_container > * .top_side h5{
     margin:7px 0 7px 0 ;
 }
